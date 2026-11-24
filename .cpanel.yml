@@ -4,6 +4,6 @@ deployment:
     - export P1=/home/onlinebl/sanjivnepali.com/
     - export P2=/home/onlinebl/public_html/sanjivnepali.com/
     - export P3=/home/onlinebl/public_html/
-    - /bin/cp test.html $P1 2>/dev/null || true
-    - /bin/cp test.html $P2 2>/dev/null || true
-    - /bin/cp test.html $P3 2>/dev/null || true
+    - /bin/cp -R index.html about journey gallery press contact assets robots.txt sitemap.xml .htaccess $P1 2>/dev/null || true
+    - /bin/cp -R index.html about journey gallery press contact assets robots.txt sitemap.xml .htaccess $P2 2>/dev/null || true
+    - /bin/cp -R index.html about journey gallery press contact assets robots.txt sitemap.xml .htaccess $P3 2>/dev/null || true

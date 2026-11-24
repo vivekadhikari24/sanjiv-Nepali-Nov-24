@@ -1,0 +1,10 @@
+# Archives and backups
+*.zip
+*.tar.gz
+*.gz
+_theme_src/
+New Folder With Items/
+
+# OS files
+.DS_Store
+Thumbs.db
