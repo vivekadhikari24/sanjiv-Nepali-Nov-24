@@ -1,5 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/onlinebl/public_html/
-    - /bin/cp test.html $DEPLOYPATH
+    - export P1=/home/onlinebl/sanjivnepali.com/
+    - export P2=/home/onlinebl/public_html/sanjivnepali.com/
+    - export P3=/home/onlinebl/public_html/
+    - /bin/cp test.html $P1 2>/dev/null || true
+    - /bin/cp test.html $P2 2>/dev/null || true
+    - /bin/cp test.html $P3 2>/dev/null || true
