@@ -59,7 +59,14 @@ PAGES = [
     }
 ]
 
-headers = {
+# NOTE: The static HTML files in this repository (e.g. index.html, about/index.html, etc.)
+# are the canonical source of truth and have received full UI/UX and on-page optimization polish.
+# To prevent accidentally overwriting polished pages, set FORCE_OVERWRITE = True before running this migration script.
+FORCE_OVERWRITE = False
+
+if not FORCE_OVERWRITE:
+    print("Static pages are already generated and polished. To re-run full scrape migration, set FORCE_OVERWRITE = True in build_static.py.")
+    exit(0)
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
