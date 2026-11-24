@@ -1,4 +1,9 @@
 # ----------------------------------------------------------------------
+# Default Index Priority (Static HTML First)
+# ----------------------------------------------------------------------
+DirectoryIndex index.html index.php
+
+# ----------------------------------------------------------------------
 # Security Headers
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
@@ -38,6 +43,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    # Serve static index.html for root
+    RewriteRule ^$ index.html [L]
 
     # Redirect non-trailing-slash directories to trailing slash
     RewriteCond %{REQUEST_FILENAME} -d

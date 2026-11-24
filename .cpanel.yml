@@ -7,3 +7,6 @@ deployment:
     - /bin/cp -R index.html about journey gallery press contact assets robots.txt sitemap.xml .htaccess $P1 2>/dev/null || true
     - /bin/cp -R index.html about journey gallery press contact assets robots.txt sitemap.xml .htaccess $P2 2>/dev/null || true
     - /bin/cp -R index.html about journey gallery press contact assets robots.txt sitemap.xml .htaccess $P3 2>/dev/null || true
+    - test -f $P1/index.php && /bin/mv $P1/index.php $P1/index.php.wpbak 2>/dev/null || true
+    - test -f $P2/index.php && /bin/mv $P2/index.php $P2/index.php.wpbak 2>/dev/null || true
+    - test -f $P3/index.php && /bin/mv $P3/index.php $P3/index.php.wpbak 2>/dev/null || true
